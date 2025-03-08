@@ -1,0 +1,38 @@
+"""
+What You'll Learn:
+✅ Extract text from PDFs (Resumes) using Python
+✅ Use AI & NLP to analyze resume relevance
+✅ Implement text embeddings & cosine similarity for scoring
+✅ Build an interactive Flask web app
+✅ Display ATS-friendly resume scores
+
+
+Tech Stack Used:
+✔ Python (Flask, PyPDF, Transformer Library)
+✔ Text Embeddings (SentenceTransformers)
+✔ Cosine Similarity for Matching
+✔ HTML, CSS, JavaScript for Frontend
+
+"""
+
+
+python3 -m venv {env_name} #for creating a virtual environment
+
+source {env_name}/bin/activate  # to activate the environment 
+
+pip install poetry # to track the details of the projet and the packages and dependecies used in this project
+
+poetry init #fill the details
+
+#add the dependecies
+
+poetry add flask sentence-transformers pymupdf scikit-learn
+
+
+#create a foldername templates bcz, falsk read this folder only
+#inside the templates create a index.html page
+
+#create a app.py file (main file)
+
+#create a folder name styles for css files 
+ 

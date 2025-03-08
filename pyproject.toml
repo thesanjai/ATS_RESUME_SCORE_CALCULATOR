@@ -1,0 +1,20 @@
+[project]
+name = "resume-score"
+version = "1"
+description = "This project is about build a ATS score calculator"
+authors = [
+    {name = "SanJai SK",email = "132538008+thesanjai@users.noreply.github.com"}
+]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "flask (>=3.1.0,<4.0.0)",
+    "sentence-transformers (>=3.4.1,<4.0.0)",
+    "pymupdf (>=1.25.3,<2.0.0)",
+    "scikit-learn (>=1.6.1,<2.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"

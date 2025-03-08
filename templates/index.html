@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Matcher</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+    <h2>Resume Matcher</h2>
+    <form action="/" method="post" enctype="multipart/form-data">
+        <input type="file" name="resume" accept="application/pdf" required><br>
+        <textarea name="job_desc" rows="4" placeholder="Enter Job Description" required></textarea><br>
+        <button type="submit">Check Match</button>
+        <button type="submit" id="Refreshbtn">Refresh</button>
+    </form>
+
+    {% if score is not none %}
+        <h3  id="scoreText">Match Score: {{ score }}%</h3>
+    {% endif %}
+
+    <script>
+        let le = document.getElementById('Refreshbtn')
+        le.addEventListener('click',function(){
+            document.querySelector("form").reset();
+            let st = document.getElementById("scoreText");
+            if (st) {
+                st.style.display = "none"; 
+            }
+        })
+    
+    </script>
+</body>
+</html>
